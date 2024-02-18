@@ -1,9 +1,27 @@
 body {
     margin: 0;
-    background-color: #1c1c1c
+    background-color: #ffffff
 }
 
 @font-face {
     font-family: 'Open-Sans';
     src: url('./fonts/OpenSans-Light.ttf')
+}
+
+.heading_div {
+    color: white;
+    text-align: center;
+    background-color: #172d4f;
+    font-family: 'Open-Sans';
+}
+
+.navbar_link {
+    padding: 0.25rem 0.5rem;
+    cursor: pointer
+}
+
+.navbar_link:hover {
+    background-color: #25477a;
+    border-radius: 5px;
+    transition: 0.3s;
 }

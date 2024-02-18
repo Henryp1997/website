@@ -6,9 +6,22 @@ app = dash.Dash(__name__)
 server = app.server
 
 app.layout = dbc.Container([
-        html.Div("Henry Pickersgill", style={'color':'white', 'text-align': 'center', 'background-color':'#172d4f', 'font-family': 'Open-Sans'}),
-        html.Div("test", style={'color':'white', 'text-align': 'center', 'background-color':'#172d4f', 'font-family': 'Open-Sans'}),
-        html.Div("Website contents here", style={'color': 'white', 'text-align': 'center', 'font-family': 'Open-Sans'})
-    ])
+    dbc.Row([
+        html.Div("Henry Pickersgill", className="heading_div"),
+        html.Div("htap2@live.co.uk | 07470521144", className="heading_div"),
+    ]),
+    html.Div(style={"height": "5px", "background-color": "#172d4f"}),
+    dbc.Row([
+        html.Div([
+                html.A("Home", className="navbar_link"),
+                html.A("Programming", className="navbar_link"),
+                html.A("Placeholder1", className="navbar_link"),
+                html.A("Placeholder2", className="navbar_link")
+            ],
+                className="heading_div"
+        )
+    ]),
+    html.Div(style={"height": "5px", "background-color": "#172d4f"}),
+])
 
 server.run(debug=True)
