@@ -67,7 +67,7 @@ app.layout = html.Div([
                         f"{hollow_bullet} Responsible for the development and test of Quantum Key Distribution systems (see ",
                         html.A("what is QKD?)", href="https://www.techtarget.com/searchsecurity/definition/quantum-key-distribution-QKD", target="_blank", style={"color": "#0000ff"})
                     ], className="list_item"),
-                    html.Div(f"{hollow_bullet} Lead developer in self-conceived automation project: large-scale front and back-end Python tool"
+                    html.Div(f"{hollow_bullet} Lead developer in self-conceived automation project: large-scale front and back-end Python tool "
                              "for automating the test and optimisation of QKD systems. Designed to speed up and simplify the test/optimisation procedures", className="list_item"),
                     html.Div(f"{hollow_bullet} Maintainer and developer of C++ control code and Linux control servers, including development of new algorithms and maintenance of PID loops", className="list_item"),
                     html.Div(f"{hollow_bullet} Supervised other members of the team and distributed automation project tasks according to the team members' experience with Python", className="list_item"),
