@@ -9,6 +9,7 @@ body {
 }
 
 .heading_div {
+    font-size: 14px;
     color: white;
     text-align: center;
     background-color: #172d4f;
@@ -39,6 +40,7 @@ body {
 }
 
 .list_item {
+    font-size: 14px;
     padding-bottom: 0.25rem;
     margin-left: 1rem
 }

@@ -16,7 +16,7 @@ st_block = {"display": "block"}
 st_none = {"display": "none"}
 nop = dash.no_update
 
-home_style = {
+content_default_style = {
     'font-size': '14px',
     'background-color': '#f4f4f4',
     'color': 'black',
@@ -26,9 +26,6 @@ home_style = {
     'border-radius': '0.5rem',
     'padding': '0.5rem'
 }
-prog_style = {}
-piano_style = {}
-photo_style = {}
 
 app.layout = html.Div([
     # header
@@ -51,7 +48,7 @@ app.layout = html.Div([
     # body
     html.Div([
         html.Div(style={"height": "0.5rem", "background-color": "#ffffff"}),
-        html.Div(
+        html.Div([
             html.Div(
                 [
                     html.B("About me", className="heading_18"),
@@ -62,7 +59,7 @@ app.layout = html.Div([
                     html.Div(f"{hollow_bullet} Interested in many areas of Mathematics, Physics, Music and Technology", className="list_item"),
                     html.Br(),
                     html.B("Technical Experience", className="heading_18"),
-                    html.B(f"{solid_bullet} Development Engineer at Toshiba Europe Ltd", className="heading_16"),
+                    html.B(f"{solid_bullet} Development Engineer at Toshiba Europe Ltd (2 years 2 months)", className="heading_16"),
                     html.Div([
                         f"{hollow_bullet} Responsible for the development and test of Quantum Key Distribution systems (see ",
                         html.A("what is QKD?)", href="https://www.techtarget.com/searchsecurity/definition/quantum-key-distribution-QKD", target="_blank", style={"color": "#0000ff"})
@@ -90,15 +87,15 @@ app.layout = html.Div([
                     html.Br(),
 
                 ],
-                style=home_style,
+                style=content_default_style,
                 id="home_main_body"
             ),
-            style={'background-color': '#ffffff'}
-        ),
-        html.Div([
-            html.Div(["hello", html.Br()]),
-            ] * 100
-            , id="programming_main_body", style={'display': 'none'}),
+            html.Div(
+                [html.B("About me", className="heading_18")] + [html.Br(),]*100,
+                style={'display': 'none'},
+                id="programming_main_body"
+            ),
+        ], style={'background-color': '#ffffff'}),
         html.Div([
             html.Div(["hello", html.Br()]),
             ] * 100
@@ -148,12 +145,11 @@ def show_hide_tabs(n_home, n_prog, n_piano, n_photo, home_div, prog_div, piano_d
     style_return_args = [st_none, ]*4
     div_return_args = [nop, nop, nop, nop]
     divs = [home_div, prog_div, piano_div, photo_div]
-    styles = [home_style, prog_style, piano_style, photo_style]
 
     div_indices = {'home': 0, 'programming': 1, 'piano': 2, 'photography': 3}
     div_index = div_indices[trigger.split("_link")[0]]
 
-    style_return_args[div_index] = styles[div_index]
+    style_return_args[div_index] = content_default_style
     div_return_args[div_index] = change_arrow(divs[div_index], down_arrow)
 
     for i in range(4):
