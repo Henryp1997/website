@@ -2,6 +2,7 @@ import dash
 from dash import Output, Input, State
 from dash import html
 import dash_bootstrap_components as dbc
+import dash_core_components as dcc
 
 app = dash.Dash(__name__)
 server = app.server
@@ -34,17 +35,18 @@ app.layout = html.Div([
     html.Div([
         html.Div("Henry Pickersgill", className="heading_div"),
         html.Div("htap2@live.co.uk | 07470521144 | Cambridge, UK", className="heading_div"),
-    html.Div(style={"height": "0.5rem", "background-color": "#172d4f"}),
-        html.Div([
-                html.A(f"{down_arrow} Home", id="home_link", className="navbar_link"),
-                html.A(f"{right_arrow} Programming", id="programming_link", className="navbar_link"),
-                html.A(f"{right_arrow} Piano", id="piano_link", className="navbar_link"),
-                html.A(f"{right_arrow} Photography", id="photography_link", className="navbar_link")
-            ],
-                className="heading_div"
-        ),
-    html.Div(style={"height": "0.5rem", "background-color": "#172d4f"}),
     ]),
+
+    # sticky header
+    html.Div([
+            html.Div(style={"height": "0.3rem", "background-color": "#172d4f"}),
+            html.A(f"{down_arrow} Home", id="home_link", className="navbar_link"),
+            html.A(f"{right_arrow} Programming", id="programming_link", className="navbar_link"),
+            html.A(f"{right_arrow} Piano", id="piano_link", className="navbar_link"),
+            html.A(f"{right_arrow} Photography", id="photography_link", className="navbar_link"),
+            html.Div(style={"height": "0.3rem", "background-color": "#172d4f"}),
+        ],
+            className="heading_div", style={'position': 'sticky', 'top': '0'}),
 
     # body
     html.Div([
@@ -95,15 +97,29 @@ app.layout = html.Div([
             ),
             style={'background-color': '#ffffff'}
         ),
-        html.Div("Programming contents here", id="programming_main_body", style={'display': 'none'}),
-        html.Div("Piano contents here", id="piano_main_body", style={'display': 'none'}),
-        html.Div("Photography contents here", id="photography_main_body", style={'display': 'none'}),
+        html.Div([
+            html.Div(["hello", html.Br()]),
+            ] * 100
+            , id="programming_main_body", style={'display': 'none'}),
+        html.Div([
+            html.Div(["hello", html.Br()]),
+            ] * 100
+            , id="piano_main_body", style={'display': 'none'}),
+        html.Div([
+            html.Div(["hello", html.Br()]),
+            ] * 100
+            , id="photography_main_body", style={'display': 'none'}),
     ]),
 
-    # footer
     html.Div([
-        html.Footer("hello", style={'color': '#00ff00'})
-    ], style={'position': 'relative'})
+        html.Div(id="percentage_bar", className="percentage_bar", style={'background-image': 'linear-gradient(to right, #116927 0%, #ffffff 0%)', 'background-color': '#ffffff', "height": "0.5rem"}),
+    ], style={"position": "sticky", "bottom": "0"}),
+
+    # hidden divs
+    html.Div("test", style=st_none, id="hidden_div1"),
+    html.Div(style=st_none, id="hidden_div2"),
+    html.Div(style=st_none, id='hidden_div3'),
+    dcc.Interval(interval=500, id="percentage_bar_timer")
 ])
 
 ### CALLBACKS ###
@@ -152,5 +168,19 @@ def show_hide_tabs(n_home, n_prog, n_piano, n_photo, home_div, prog_div, piano_d
 
 def change_arrow(children, arrow):
     return f"{arrow} {children.split(' ')[1]}"
+
+app.clientside_callback(
+""" function (n1, n2, n3, n4) {
+        if (n1 || n2 || n3 || n4) {
+            window.scrollTo(0, 0)
+        }
+    }
+""",
+    Output('hidden_div3', 'children'),
+    Input('home_link', 'n_clicks'),
+    Input('programming_link', 'n_clicks'),
+    Input('piano_link', 'n_clicks'),
+    Input('photography_link', 'n_clicks')
+)
 
 app.run_server(host='0.0.0.0', port=5000, debug=True)
