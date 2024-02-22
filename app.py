@@ -18,10 +18,10 @@ nop = dash.no_update
 
 home_style = {
     'font-size': '14px',
-    'background-color': '#f0f0f0',
+    'background-color': '#f4f4f4',
     'color': 'black',
     'font-family': 'Open-Sans',
-    'width': '60%',
+    'width': '70%',
     'margin': 'auto',
     'border-radius': '0.5rem',
     'padding': '0.5rem'
@@ -55,24 +55,22 @@ app.layout = html.Div([
             html.Div(
                 [
                     html.B("About me", className="heading_18"),
-                    f"{hollow_bullet} MPhys & BSc graduate from the University of Leeds",
-                    html.Br(),
-                    f"{hollow_bullet} Python developer",
-                    html.Br(),
-                    f"{hollow_bullet} Piano player",
-                    html.Br(),
-                    f"{hollow_bullet} Sports and fitness enthusiast",
-                    html.Br(),
-                    f"{hollow_bullet} Interested in many areas of Mathematics, Physics, Music and Technology",
-                    html.Br(),
+                    html.Div(f"{hollow_bullet} MPhys & BSc graduate from the University of Leeds", className="list_item"),
+                    html.Div(f"{hollow_bullet} Python developer", className="list_item"),
+                    html.Div(f"{hollow_bullet} Piano player", className="list_item"),
+                    html.Div(f"{hollow_bullet} Sports and fitness enthusiast", className="list_item"),
+                    html.Div(f"{hollow_bullet} Interested in many areas of Mathematics, Physics, Music and Technology", className="list_item"),
                     html.Br(),
                     html.B("Technical Experience", className="heading_18"),
                     html.B(f"{solid_bullet} Development Engineer at Toshiba Europe Ltd", className="heading_16"),
-                    html.Br(),
-                    html.Br(),
-                    html.Br(),
-                    html.Br(),
-                    html.Br(),
+                    html.Div([
+                        f"{hollow_bullet} Responsible for the development and test of Quantum Key Distribution systems (see ",
+                        html.A("what is QKD?)", href="https://www.techtarget.com/searchsecurity/definition/quantum-key-distribution-QKD", target="_blank", style={"color": "#0000ff"})
+                    ], className="list_item"),
+                    html.Div(f"{hollow_bullet} Lead developer in self-conceived automation project: large-scale front and back-end Python tool"
+                             "for automating the test and optimisation of QKD systems. Designed to speed up and simplify the test/optimisation procedures", className="list_item"),
+                    html.Div(f"{hollow_bullet} Maintainer and developer of C++ control code and Linux control servers, including development of new algorithms and maintenance of PID loops", className="list_item"),
+                    html.Div(f"{hollow_bullet} Supervised other members of the team and distributed automation project tasks according to the team members' experience with Python", className="list_item"),
                     html.Br(),
                     html.Br(),
                     html.Br(),
