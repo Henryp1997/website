@@ -9,7 +9,7 @@ body {
 }
 
 .heading_div {
-    font-size: 14px;
+    font-size: 1.5rem;
     color: white;
     text-align: center;
     background-color: #172d4f;
@@ -28,19 +28,19 @@ body {
 }
 
 .heading_18 {
-    font-size: 18px;
+    font-size: 1.5rem;
     padding-bottom: 0.5rem;
     display: block
 }
 
 .heading_16 {
-    font-size: 16px;
+    font-size: 1.25rem;
     padding-bottom: 0.5rem;
     display: block
 }
 
 .list_item {
-    font-size: 14px;
+    font-size: 1rem;
     padding-bottom: 0.25rem;
     margin-left: 1rem
 }
