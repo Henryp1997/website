@@ -5,6 +5,6 @@ window.onscroll = function () {
         percentage = 100
     }
     
-    var percent_bar = document.getElementById('percentage_bar')
+    var percent_bar = document.getElementById('percentage_bar');
     percent_bar.style.backgroundImage = `linear-gradient(to right, #116927 ${percentage}%, #ffffff ${percentage}%)`
 }

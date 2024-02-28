@@ -1,6 +1,5 @@
 body {
     margin: 0;
-    background-color: #ffffff
 }
 
 @font-face {
@@ -9,11 +8,45 @@ body {
 }
 
 .heading_div {
-    font-size: 1.5rem;
+    font-size: 1.15rem;
     color: white;
     text-align: center;
     background-color: #172d4f;
     font-family: 'Open-Sans';
+}
+
+.top_heading_div {
+    font-size: 1.15rem;
+    color: white;
+    background-color: #172d4f;
+    font-family: 'Open-Sans';
+    text-align: center
+}
+
+.dark_mode_btn {
+    height: 1.05rem;
+    width: 2.5rem;
+    border: 1.5px solid #000;
+    border-radius: 8px;
+    background-color: #3a3a3a;
+    margin-left: 0.5rem;
+    display: inline-block;
+}
+
+.dark_mode_btn:hover {
+    cursor: pointer
+}
+
+.dark_mode_inner {
+    margin-left: -0.7rem;
+    margin-right: 0.5rem;
+    margin-top: 0.02rem;
+    height: 0.65rem;
+    width: 0.65rem;
+    border-radius: 50%;
+    border: 1.5px solid #000;
+    background-color: #a0a0a0;
+    display: inline-block;
 }
 
 .navbar_link {
@@ -27,14 +60,58 @@ body {
     transition: 0.3s;
 }
 
+.white_v_spacer {
+    height: 0.5rem;
+    background-color: white
+}
+
+.black_v_spacer {
+    height: 0.5rem;
+    background-color: black
+}
+
+.display_none {
+    display: none
+}
+
+.content_border {
+    background-color: white
+}
+
+.content_border_dark {
+    background-color: black
+}
+
+.content {
+    font-size: 14px;
+    background-color: #f4f4f4;
+    color: black;
+    font-family: 'Open-Sans';
+    width: 75%;
+    margin: auto;
+    border-radius: 0.5rem;
+    padding: 0.5rem
+}
+
+.content_dark {
+    font-size: 14px;
+    background-color: #202020;
+    color: white;
+    font-family: 'Open-Sans';
+    width: 75%;
+    margin: auto;
+    border-radius: 0.5rem;
+    padding: 0.5rem
+}
+
 .heading_18 {
-    font-size: 1.5rem;
+    font-size: 1.15rem;
     padding-bottom: 0.5rem;
     display: block
 }
 
 .heading_16 {
-    font-size: 1.25rem;
+    font-size: 1rem;
     padding-bottom: 0.5rem;
     display: block
 }
