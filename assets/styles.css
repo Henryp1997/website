@@ -1,3 +1,7 @@
+:root {
+    --content_width: 65%
+}
+
 body {
     margin: 0;
 }
@@ -40,7 +44,7 @@ body {
 .dark_mode_inner {
     margin-left: -0.7rem;
     margin-right: 0.5rem;
-    margin-top: 0.02rem;
+    margin-top: -0.04rem;
     height: 0.65rem;
     width: 0.65rem;
     border-radius: 50%;
@@ -87,10 +91,22 @@ body {
     background-color: #f4f4f4;
     color: black;
     font-family: 'Open-Sans';
-    width: 75%;
+    width: var(--content_width);
     margin: auto;
     border-radius: 0.5rem;
     padding: 0.5rem
+}
+
+.content_hidden {
+    font-size: 14px;
+    background-color: #f4f4f4;
+    color: black;
+    font-family: 'Open-Sans';
+    width: var(--content_width);
+    margin: auto;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    display: none
 }
 
 .content_dark {
@@ -98,10 +114,22 @@ body {
     background-color: #202020;
     color: white;
     font-family: 'Open-Sans';
-    width: 75%;
+    width: var(--content_width);
     margin: auto;
     border-radius: 0.5rem;
     padding: 0.5rem
+}
+
+.content_dark_hidden {
+    font-size: 14px;
+    background-color: #202020;
+    color: white;
+    font-family: 'Open-Sans';
+    width: var(--content_width);
+    margin: auto;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    display_none
 }
 
 .heading_18 {
@@ -117,7 +145,7 @@ body {
 }
 
 .list_item {
-    font-size: 1rem;
+    font-size: 1.1rem;
     padding-bottom: 0.25rem;
     margin-left: 1rem
 }
