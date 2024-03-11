@@ -17,7 +17,9 @@ function show_home_tab () {
     home_link.innerHTML = "▾ Profile";
     prog_link.innerHTML = "▸ Programming";
     piano_link.innerHTML = "▸ Piano";
-    photo_link.innerHTML = "▸ Photography"
+    photo_link.innerHTML = "▸ Photography";
+
+    window.scrollTo(0, 0)
 }
 
 function show_prog_tab () {
@@ -40,6 +42,8 @@ function show_prog_tab () {
     prog_link.innerHTML = "▾ Programming";
     piano_link.innerHTML = "▸ Piano";
     photo_link.innerHTML = "▸ Photography"
+
+    window.scrollTo(0, 0)
 }
 
 function show_piano_tab () {
@@ -62,6 +66,8 @@ function show_piano_tab () {
     prog_link.innerHTML = "▸ Programming";
     piano_link.innerHTML = "▾ Piano";
     photo_link.innerHTML = "▸ Photography"
+
+    window.scrollTo(0, 0)
 }
 
 function show_photo_tab () {
@@ -84,4 +90,6 @@ function show_photo_tab () {
     prog_link.innerHTML = "▸ Programming";
     piano_link.innerHTML = "▸ Piano";
     photo_link.innerHTML = "▾ Photography"
+
+    window.scrollTo(0, 0)
 }
