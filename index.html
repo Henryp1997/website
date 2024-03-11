@@ -1,31 +1,161 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <link rel="stylesheet" href="./assets/styles.css">
-    </head>
-    <body>
-        <div style="background-color: #172d4f">
-            <div class="top_heading_div">
-                <h1 style="color:#ffffff; margin-top: 0; margin-bottom: 0.5rem">Henry Pickersgill</h1>
-            </div>
-            <div style="padding-bottom: 0.5rem" class="heading_div">
-                <div>htap2@live.co.uk | 07470521144 | Cambridge, UK</div>
-                <a style="color: #ffffff" href="https://github.com/Henryp1997">https://github.com/Henryp1997</a>
-            </div>
+<head>
+    <link id="pagestyle" rel="stylesheet" href="./assets/light.css">
+    <script type="text/javascript" src="assets/tabs.js"></script>
+    <script type="text/javascript" src="assets/dark_mode.js"></script>
+    <script type="text/javascript" src="assets/scroll_percentage.js"></script>
+</head>
+<body>        
+<div id="react-entry-point"><div>
+
+    <div><div id="name" class="top_heading_div">
+        <div style="margin-left: 41.5rem; display: inline-block;">Henry Pickersgill</div>
+        <div style="width: 38.5rem; display: inline-block;"></div>
+        <button id="dark_mode_btn" class="dark_mode_btn" onclick="toggle_dark_mode()">
+            <div class="dark_mode_inner"></div>
+        </button></div><div class="heading_div">htap2@live.co.uk | 07470521144 | Cambridge, UK</div>
+    </div>
+
+    <div class="heading_div" style="position: sticky; top: 0px;">
+        <div style="height: 0.5rem; background-color: rgb(23, 45, 79);"></div>
+        <a id="home_link" class="navbar_link" onclick="show_home_tab()">▾ Profile</a>
+	<a id="programming_link" class="navbar_link" onclick="show_prog_tab()">▸ Programming</a>
+	<a id="piano_link" class="navbar_link" onclick="show_piano_tab()">▸ Piano</a>
+	<a id="photography_link" class="navbar_link" onclick="show_photo_tab()">▸ Photography</a>
+	<div style="height: 0.5rem; background-color: rgb(23, 45, 79);"></div>
+    </div>
+
+    <div>
+	<div id="top_content_v_spacer" class="v_spacer"></div>
+        <div id="content_borders" class="content_border">
+
+	    <div id="home_main_body" class="content">
+	        <b class="heading_18">About me</b>
+		    <div class="list_item">
+			◦ MPhys &amp; BSc graduate from the University of Leeds
+			<div style="height: 0.5rem;"></div>
+			◦ Python developer
+			<div style="height: 0.5rem;"></div>
+			◦ Piano player
+			<div style="height: 0.5rem;"></div>
+			◦ Sports and fitness enthusiast
+			<div style="height: 0.5rem;"></div>
+			◦ Interested in many areas of Mathematics, Physics, Music and Technology
+			<div style="height: 0.5rem;"></div>
+		    </div>
+		<br>
+		<b class="heading_18">Technical Experience</b>
+		<b class="heading_16">• Development Engineer at Toshiba Europe Ltd, Cambridge (2 years 2 months)</b>
+		    <div class="list_item">
+			◦ Responsible for the development and test of Quantum Key Distribution systems (see <a id="what_is_qkd_link" href="https://www.techtarget.com/searchsecurity/definition/quantum-key-distribution-QKD" target="_blank" style="color: rgb(0, 0, 255);">what is QKD?)</a>
+			<div style="height: 0.5rem;"></div>
+			◦ Lead developer in self-conceived automation project: large-scale front and back-end Python tool for automating the test and optimisation of QKD systems. Designed to speed up and simplify the test/optimisation procedures
+			<div style="height: 0.5rem;"></div>
+			◦ Maintainer and developer of C++ control code and Linux control servers, including development of new algorithms and maintenance of PID loops
+			<div style="height: 0.5rem;"></div>
+			◦ Supervised other members of the team and distributed automation project tasks according to the team members' experience with Python
+		    </div>
+		<br>
+		<b class="heading_18">Technical interests</b>
+		    <div class="list_item">
+			◦ Research science
+			<div style="height: 0.5rem;"></div>
+			◦ Python development for automation
+			<div style="height: 0.5rem;"></div>
+			◦ Game and physics engine development
+			<div style="height: 0.5rem;"></div>
+			◦ Electronics (e.g., Arduino), computers and other hardware
+			<div style="height: 0.5rem;"></div>
+			◦ 3D design for 3D printing
+			<div style="height: 0.5rem;"></div>
+			◦ Mathematical simulations, algorithms and general problem solving
+			<div style="height: 0.5rem;"></div>
+			◦ Windows and Android app development
+			<div style="height: 0.5rem;"></div>
+			◦ Music notation software and audio analysis
+		    </div>
+        
         </div>
 
-        <b style="font-family: Open-Sans; font-size: 1.2rem">
-            <p style="text-align: center">This HTML site is temporary - I have a website written in a Python front-end tool (Plotly dash) that currently cannot be used with Github Pages. Please watch this space...</p>
-            <div style="margin-left: 1rem">Downloads:</div>
-            <div style="margin-left: 2rem">
-                <a href="./CV.pdf" style="text-align: left" download>&#8226; CV</a><br>
-                <a href="./MPhys_report_hydrogels.pdf" download>&#8226; Master's report on dynamic light scattering with polymer hydrogels</a><br>
-                <a href="./NLCs.pdf" download>&#8226; Report on nematic liquid crystals</a><br>
-                <a href="./zeeman.pdf" download>&#8226; Report on the Zeeman effect</a><br>
-                <a href="./xray.pdf" download>&#8226; Report on X-ray cystallography</a><br>
-                <a href="./Majorana_fermions.pdf" download>&#8226; Essay on Majorana fermions (topological superconductors)</a>
-            </div>
-        </b>
+	    <div id="programming_main_body" class="display_none">
+		<b class="heading_18">My approach to software development</b>
+		    <div class="list_item">
+		    	◦ My journey with programming began at Leeds University during my Physics degree. During this degree, Python was used for data analysis, plotting and testing of physical models (i.e., through curve fitting to equations generated by a particular model). I quickly became interested in Python and software in general.
+			<div style="height: 0.5rem;"></div>
+			◦ During my time at Toshiba Europe Ltd, I became the lead developer in an automation project. The aim was to test and optimise QKD systems - before I joined the team this was almost completely manual. This automation project contained approximately 20 Python scripts, all designed to optimise one part of the electronics/optics contained within the system. This project also contained a front-end so I became familiar with front-end development and best-practices. This tool is now the main method of testing the QKD systems and is used by staff unfamiliar with the inner workings of the system.
+			<div style="height: 0.5rem;"></div>
+			◦ I write clean, concise and well-commented code and I am particularly careful with repeated code.
+			<div style="height: 0.5rem;"></div>
+			◦ I explore programming outside of work, including trying other languages - please see below.
+		    </div>
+		<br>
+		<b class="heading_18">Python</b>
+		<b class="heading_16">• 2D game development</b>
+		    <div class="list_item">
+			<div style="display: inline-block;">◦ </div><a id="brick_link" class="github_link" href="https://github.com/Henryp1997/brickbreak" target="_blank"> Brickbreaker</a> - 2D paddle and ball game where the objective is to break all the bricks on the screen. No online game development resources were used aside from the 2D engine (pygame) documentation, as a challenge for myself. Below you can see a screenshot of the third level, with multiple powerups active.
+			<div style="height: 0.5rem;"></div>
+			<div style="text-align: center;">
+			    <img src="./assets/screenshots/brickbreak.png" style="height: 50%; width: 50%;">
+			</div>
+			<div style="height: 0.5rem;"></div>
+			<div style="display: inline-block;">◦ </div><a id="platformer_link" class="github_link" href="https://github.com/Henryp1997/platformer" target="_blank"> Platformer</a> - Began experimenting with 2D platform game physics. Not using any online resources to work out the dynamics of the player's movements, aside from the 2D engine (pygame) documentation, as a challenge for myself. This project is in the early stages. Below you can see a screenshot of the demo which currently allows the player to walk and interact with platforms.
+			<div style="height: 0.5rem;"></div>
+			<div style="text-align: center;">
+			    <img src="./assets/screenshots/platformer.png" style="height: 50%; width: 50%;">				</div>
+			<div style="height: 0.5rem;"></div>
+			<div style="display: inline-block;">◦ </div><a id="GoL_link" class="github_link" href="https://github.com/Henryp1997/Game-of-life" target="_blank"> Conway's game of life</a> - Implementation in Python. This was my first experience with 'game' development and I added some nice-to-have features such as the ability to click cells to 'resurrect' dead cells and start with unique patterns. Below you can see a demonstration of the so-called 'Glider gun' pattern.
+			<div style="height: 0.5rem;"></div>
+			<div style="text-align: center;">
+			    <img src="./assets/screenshots/game_of_life.png" style="height: 50%; width: 50%;">				</div>
+			</div>
+		<b class="heading_16">• Automation</b>
+		<br>
+		<b class="heading_18">Web development with HTML, CSS and JS</b>
+		    <div class="list_item">
+		        test
+			<div style="height: 0.5rem;"></div>
+			test
+			<div style="height: 0.5rem;"></div>
+			test<div style="height: 0.5rem;"></div>
+		</div>
+		<br>
+		<b class="heading_18">Garmin watch face creation (Monkey C)</b>
+		    <div class="list_item">
+			test
+			<div style="height: 0.5rem;"></div>
+			test
+			<div style="height: 0.5rem;"></div>
+			test<div style="height: 0.5rem;"></div>
+			</div>
+		<br>
+		<b class="heading_18">C++</b>
+		    <div class="list_item">
+		    	test
+			<div style="height: 0.5rem;"></div>
+			test
+			<div style="height: 0.5rem;"></div>
+			test
+			<div style="height: 0.5rem;"></div>
+			
+		    </div>
+	    </div>
 
-    </body>
+	    <div id="piano_main_body" class="display_none"></div>
+	    <div id="photography_main_body" class="display_none"></div>
+	</div>
+    </div>
+
+    <div style="position: sticky; bottom: 0px;">
+	<div id="percentage_bar" style="background-image: linear-gradient(to right, rgb(17, 105, 39) 0%, rgb(255, 255, 255) 0%); background-color: rgb(255, 255, 255); height: 0.5rem;">
+	</div>
+    </div>
+
+    <div id="hidden_div1" style="display: none;"></div>
+    <div id="hidden_div2" style="display: none;"></div>
+    <div id="hidden_div3" style="display: none;"></div>
+
+</div>
+
+    
+</body>
 </html>
